@@ -24,4 +24,7 @@ curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin
 echo "typo3 ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/typo3
 chmod 600 /etc/sudoers.d/typo3
 
+mkdir /var/www/typo3demo
+chown typo3: /var/www/typo3demo
+
 exit 0
