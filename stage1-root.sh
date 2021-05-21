@@ -27,4 +27,7 @@ chmod 600 /etc/sudoers.d/typo3
 mkdir /var/www/typo3demo
 chown typo3: /var/www/typo3demo
 
+sed -i -e 's/APACHE_RUN_USER=.*$/APACHE_RUN_USER=typo3/g' /etc/apache2/envvars
+sed -i -e 's/APACHE_RUN_GROUP=.*$/APACHE_RUN_GROUP=typo3/g' /etc/apache2/envvars
+
 exit 0
